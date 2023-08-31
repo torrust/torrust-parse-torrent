@@ -1,0 +1,74 @@
+{
+    "announce": "https://academictorrents.com/announce.php",
+    "announce-list": [
+        [
+            "https://academictorrents.com/announce.php"
+        ],
+        [
+            "https://ipv6.academictorrents.com/announce.php"
+        ],
+        [
+            "udp://tracker.opentrackr.org:1337/announce"
+        ],
+        [
+            "udp://tracker.openbittorrent.com:80/announce"
+        ]
+    ],
+    "created by": "BitComet/1.86",
+    "creation date": 1650039422,
+    "encoding": "UTF-8",
+    "info": {
+        "ed2k": "<hex>62 60 E2 30 EE AD 1A FC 19 5C B5 F7 11 E2 20 BE</hex>",
+        "filehash": "<hex>E4 BB C7 8C CB 94 3A 14 2C 89 81 1A 0F 09 67 4B A6 4C 1B FA</hex>",
+        "length": 12867952426,
+        "name": "MC_GRID.zip",
+        "name.utf-8": "MC_GRID.zip",
+        "piece length": 2097152,
+        "pieces": "<hex>...</hex>"
+    },
+    "nodes": [
+        [
+            "188.163.121.224",
+            56711
+        ],
+        [
+            "162.250.131.26",
+            13386
+        ],
+        [
+            "195.154.181.225",
+            39616
+        ],
+        [
+            "47.184.14.143",
+            6881
+        ],
+        [
+            "62.195.208.134",
+            6881
+        ],
+        [
+            "185.148.3.232",
+            6881
+        ],
+        [
+            "154.45.216.246",
+            1043
+        ],
+        [
+            "177.125.59.73",
+            50321
+        ],
+        [
+            "185.107.71.140",
+            28015
+        ],
+        [
+            "91.122.25.53",
+            19020
+        ]
+    ],
+    "url-list": [
+        "magnet:?xt=urn:btih:HTIY74WT53EICID5ZROKLIWDUKR27ZDC&dn=MC_GRID.zip&xl=12867952426"
+    ]
+}

@@ -1,0 +1,14 @@
+[package]
+name = "torrust-parse-torrent"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+binascii = "0.1.4"
+serde = { version = "1.0", features = ["rc"] }
+serde_bencode = "0.2.3"
+serde_bytes = "0.11.12"
+serde_derive = "1.0.188"
+serde_json = "1.0.105"
+sha-1 = "0.10.1"
+thiserror = "1.0.47"
