@@ -15,7 +15,9 @@ fn main() -> io::Result<()> {
     let args: Vec<String> = env::args().collect();
     if args.len() != 2 {
         eprintln!("Usage: cargo run <PATH_TO_TORRENT_FILE>");
-        eprintln!("For example: cargo run ./torrents/mandelbrot_set_01.torrent");
+        eprintln!(
+            "For example: cargo run ./tests/fixtures/torrents/not-working-with-two-nodes.torrent"
+        );
         std::process::exit(1);
     }
 
@@ -23,12 +25,12 @@ fn main() -> io::Result<()> {
     let mut bytes = Vec::new();
     file.read_to_end(&mut bytes)?;
 
-    println!("Decoding torrent with standard serde implementation ...");
+    println!("Decoding torrent with verbose implementation ...\n");
 
     match from_bytes::<BValue>(&bytes) {
-        Ok(_value) => {
-            let torrent = parse_torrent::decode_torrent(&bytes);
-            println!("Final parsed torrent: \n{torrent:#?}");
+        Ok(value) => {
+            let torrent = parse_torrent_verbose::decode_torrent(value);
+            println!("Final parsed torrent: \n\n{torrent:#?}");
             Ok(())
         }
         Err(e) => {
@@ -37,12 +39,12 @@ fn main() -> io::Result<()> {
         }
     }?;
 
-    println!("Decoding torrent with verbose implementation ...");
+    println!("\nDecoding torrent with standard serde implementation ...\n");
 
     match from_bytes::<BValue>(&bytes) {
-        Ok(value) => {
-            let torrent = parse_torrent_verbose::decode_torrent(value);
-            println!("Final parsed torrent: \n{torrent:#?}");
+        Ok(_value) => {
+            let torrent = parse_torrent::decode_torrent(&bytes);
+            println!("Final parsed torrent: \n\n{torrent:#?}");
             Ok(())
         }
         Err(e) => {

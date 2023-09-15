@@ -14,5 +14,5 @@ Modules follow the structure of the original project.
 ## Usage
 
 ```s
-cargo run ./torrents/mandelbrot_set_01.torrent
+cargo run ./tests/fixtures/torrents/not-working-with-two-nodes.torrent
 ```
